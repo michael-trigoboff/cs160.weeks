@@ -1,32 +1,30 @@
 # demonstrates Python functions
 
 # returns nothing
-def fn():
-	print('fn called')
+def fn(n):
+	print(f'fn: called with {n}')
 
 # returns 1 result
 def add(x, y):
-	print(f'adding {x} and {y}')
-	return x + y
-
-# returns 4 results
-def arith(x, y):
-	print(f'arith {x} and {y}')
-	return x + y, x - y, x * y, x / y
+	sum = x + y
+	print(f'add: adding {x} and {y}')
+	print(f'add: returning {sum}')
+	return sum
 
 # returns Boolean (True or False)
-def gt(x, y):
-	print(f'is {x} greater than {y}?')
+def greaterThan(x, y):
+	print(f'greaterThan: is {x} greater than {y}?')
 	return x > y
 
-fn()
+fn(33)
 print()					# skips a line
 
 addRet = add(3, 4)
-print(f'sum = {addRet}')
+print(f'add function returned {addRet}')
 print()					# skips a line
 
-if gt(3, 4):
+gt = greaterThan(3, 4)
+if gt:
 	print('yes')
 else:
 	print('no')
